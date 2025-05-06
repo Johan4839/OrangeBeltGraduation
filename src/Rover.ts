@@ -16,6 +16,7 @@ export class Rover {
     const EAST = "E";
     const NORTH = "N";
     const WEST = "W";
+    const SOUTH = "S";
     for (
       let instruction = 0;
       instruction < roverMovementInstruction.length;
@@ -28,14 +29,14 @@ export class Rover {
         } else if (this.roverState.direction === NORTH) {
           this.roverState.direction = WEST;
         } else if (this.roverState.direction === WEST) {
-          this.roverState.direction = "S";
-        } else if (this.roverState.direction === "S") {
+          this.roverState.direction = SOUTH;
+        } else if (this.roverState.direction === SOUTH) {
           this.roverState.direction = EAST;
         }
       } else if (instructionElement === "R") {
         if (this.roverState.direction === EAST) {
-          this.roverState.direction = "S";
-        } else if (this.roverState.direction === "S") {
+          this.roverState.direction = SOUTH;
+        } else if (this.roverState.direction === SOUTH) {
           this.roverState.direction = WEST;
         } else if (this.roverState.direction === WEST) {
           this.roverState.direction = NORTH;
@@ -46,7 +47,7 @@ export class Rover {
         if (this.roverState.direction === EAST) {
           this.roverState.xx++;
         }
-        if (this.roverState.direction === "S") {
+        if (this.roverState.direction === SOUTH) {
           this.roverState.yy--;
         }
         if (this.roverState.direction === WEST) {
