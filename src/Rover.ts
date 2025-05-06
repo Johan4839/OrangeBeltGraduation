@@ -13,6 +13,7 @@ export class Rover {
 
   public go(roverMovementInstruction: string): void {
     const LEFT = "L";
+    const RIGHT = "R";
     const EAST = "E";
     const NORTH = "N";
     const WEST = "W";
@@ -33,7 +34,7 @@ export class Rover {
         } else if (this.roverState.direction === SOUTH) {
           this.roverState.direction = EAST;
         }
-      } else if (instructionElement === "R") {
+      } else if (instructionElement === RIGHT) {
         if (this.roverState.direction === EAST) {
           this.roverState.direction = SOUTH;
         } else if (this.roverState.direction === SOUTH) {
