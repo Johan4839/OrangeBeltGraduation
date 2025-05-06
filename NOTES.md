@@ -11,5 +11,9 @@
     Not sure yet about xx and yy but for now serves its purpose
 [ ] Rename magic numbers to constants
     3 -> minimumAmountOfInputVariables
+    L -> Left
+    E -> East
+
+    
 
 
