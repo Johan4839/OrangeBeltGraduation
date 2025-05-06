@@ -3,5 +3,6 @@
     p -> positionAndDirection
     s -> positionAndDirectionArray
     rs -> roverState
+    dd -> direction
 
 
