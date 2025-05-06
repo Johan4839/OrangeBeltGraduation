@@ -9,11 +9,16 @@
     i -> instruction
     c -> instructionElement
     Not sure yet about xx and yy but for now serves its purpose
-[ ] Rename magic numbers to constants
+[x] Rename magic numbers to constants
     3 -> minimumAmountOfInputVariables
     L -> Left
     E -> East
-    and the others
+    N -> North
+    W- > West
+    S -> South
+    R -> Right
+    M -> Move
+
 
 
     
