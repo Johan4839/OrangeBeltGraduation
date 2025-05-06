@@ -6,5 +6,6 @@
     rs -> roverState
     dd -> direction
     cms -> roverMovementInstruction
-
+    i -> instruction
+    c -> instructionElement
 

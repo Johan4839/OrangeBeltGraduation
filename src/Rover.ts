@@ -11,9 +11,13 @@ export class Rover {
   }
 
   public go(roverMovementInstruction: string): void {
-    for (let i = 0; i < roverMovementInstruction.length; i++) {
-      const c = roverMovementInstruction[i];
-      if (c === "L") {
+    for (
+      let instruction = 0;
+      instruction < roverMovementInstruction.length;
+      instruction++
+    ) {
+      const instructionElement = roverMovementInstruction[instruction];
+      if (instructionElement === "L") {
         if (this.roverState.direction === "E") {
           this.roverState.direction = "N";
         } else if (this.roverState.direction === "N") {
@@ -23,7 +27,7 @@ export class Rover {
         } else if (this.roverState.direction === "S") {
           this.roverState.direction = "E";
         }
-      } else if (c === "R") {
+      } else if (instructionElement === "R") {
         if (this.roverState.direction === "E") {
           this.roverState.direction = "S";
         } else if (this.roverState.direction === "S") {
@@ -33,7 +37,7 @@ export class Rover {
         } else if (this.roverState.direction === "N") {
           this.roverState.direction = "E";
         }
-      } else if (c === "M") {
+      } else if (instructionElement === "M") {
         if (this.roverState.direction === "E") {
           this.roverState.xx++;
         }
