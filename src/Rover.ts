@@ -53,12 +53,12 @@ export class Rover {
       }
     }
   }
-  public get XYD(): string {
+  public get roverStatePrettyPrint(): string {
     return `${this.roverState.xx} ${this.roverState.yy} ${this.roverState.direction}`;
   }
 
   public pos(): string {
-    return this.XYD;
+    return this.roverStatePrettyPrint;
   }
 
   private roverState: RoverState = new RoverState();

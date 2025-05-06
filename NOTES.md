@@ -8,4 +8,5 @@
     cms -> roverMovementInstruction
     i -> instruction
     c -> instructionElement
+    Not sure yet about xx and yy but for now serves its purpose
 
