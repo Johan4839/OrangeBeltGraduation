@@ -1,4 +1,5 @@
 # First 🍅
+[x] remove dead code
 [ ] Readability: proper naming of variables
     p -> positionAndDirection
     s -> positionAndDirectionArray

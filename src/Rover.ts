@@ -49,11 +49,6 @@ export class Rover {
       }
     }
   }
-
-  public G(z: string): void {
-    this.go(z[0]);
-  }
-
   public get XYD(): string {
     return `${this.roverState.xx} ${this.roverState.yy} ${this.roverState.direction}`;
   }
