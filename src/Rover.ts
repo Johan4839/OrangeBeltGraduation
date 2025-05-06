@@ -18,6 +18,7 @@ export class Rover {
     const NORTH = "N";
     const WEST = "W";
     const SOUTH = "S";
+    const MOVE = "M";
     for (
       let instruction = 0;
       instruction < roverMovementInstruction.length;
@@ -44,7 +45,7 @@ export class Rover {
         } else if (this.roverState.direction === NORTH) {
           this.roverState.direction = EAST;
         }
-      } else if (instructionElement === "M") {
+      } else if (instructionElement === MOVE) {
         if (this.roverState.direction === EAST) {
           this.roverState.xx++;
         }

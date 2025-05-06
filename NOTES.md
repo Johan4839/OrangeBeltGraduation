@@ -13,6 +13,8 @@
     3 -> minimumAmountOfInputVariables
     L -> Left
     E -> East
+    and the others
+
 
     
 
