@@ -1,6 +1,6 @@
 # First 🍅
 [x] remove dead code
-[ ] Readability: proper naming of variables
+[x] Readability: proper naming of variables
     p -> positionAndDirection
     s -> positionAndDirectionArray
     rs -> roverState
@@ -9,4 +9,7 @@
     i -> instruction
     c -> instructionElement
     Not sure yet about xx and yy but for now serves its purpose
+[ ] Rename magic numbers to constants
+    3 -> minimumAmountOfInputVariables
+
 

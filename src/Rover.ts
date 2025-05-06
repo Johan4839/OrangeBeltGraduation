@@ -3,7 +3,8 @@ import { RoverState } from "./RoverState";
 export class Rover {
   constructor(positionAndDirection: string = "") {
     const positionAndDirectionArray = positionAndDirection.split(" ");
-    if (positionAndDirectionArray.length >= 3) {
+    const minimumAmountOfInputVariables = 3;
+    if (positionAndDirectionArray.length >= minimumAmountOfInputVariables) {
       this.roverState.xx = parseInt(positionAndDirectionArray[0], 10);
       this.roverState.yy = parseInt(positionAndDirectionArray[1], 10);
       this.roverState.direction = positionAndDirectionArray[2][0];
