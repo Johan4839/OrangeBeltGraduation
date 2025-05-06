@@ -57,7 +57,7 @@ export class Rover {
     return `${this.roverState.xx} ${this.roverState.yy} ${this.roverState.direction}`;
   }
 
-  public pos(): string {
+  public getCurrentRoverPosition(): string {
     return this.roverStatePrettyPrint;
   }
 
