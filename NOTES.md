@@ -5,5 +5,6 @@
     s -> positionAndDirectionArray
     rs -> roverState
     dd -> direction
+    cms -> roverMovementInstruction
 
 
