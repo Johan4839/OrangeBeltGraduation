@@ -26,6 +26,8 @@
     [x] move constants to class level
     [x] checkForLeftTurn
     [x] performLeftTurn
+    [x] checkForRightTurn
+    [ ]
 
 
 
