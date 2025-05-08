@@ -30,7 +30,7 @@ export class Rover {
         this.performLeftTurn();
       } else if (this.checkForRightTurn(instructionElement)) {
         this.performRightTurn();
-      } else if (instructionElement === this.MOVE) {
+      } else if (this.checkForMove(instructionElement)) {
         if (this.roverState.direction === this.EAST) {
           this.roverState.xx++;
         }
@@ -45,6 +45,10 @@ export class Rover {
         }
       }
     }
+  }
+
+  private checkForMove(instructionElement: string) {
+    return instructionElement === this.MOVE;
   }
 
   private performRightTurn() {
