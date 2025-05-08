@@ -22,8 +22,9 @@
 # Second 🍅
 [x] Remembered Alessandro comment not to rename public methods, so rolling that back
 [x] Add back unused public method for the same reason
-[ ] Extract behaviour into its own method
+[ ] Extract instruction into its own method
     [x] checkForLeftTurn
+    [x] move constants to class level
 
 
 

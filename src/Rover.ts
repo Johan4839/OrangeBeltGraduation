@@ -12,14 +12,14 @@ export class Rover {
   }
 
   private readonly LEFT = "L";
+  private readonly RIGHT = "R";
+  private readonly EAST = "E";
+  private readonly NORTH = "N";
+  private readonly WEST = "W";
+  private readonly SOUTH = "S";
+  private readonly MOVE = "M";
 
   public go(roverMovementInstruction: string): void {
-    const RIGHT = "R";
-    const EAST = "E";
-    const NORTH = "N";
-    const WEST = "W";
-    const SOUTH = "S";
-    const MOVE = "M";
     for (
       let instruction = 0;
       instruction < roverMovementInstruction.length;
@@ -27,36 +27,36 @@ export class Rover {
     ) {
       const instructionElement = roverMovementInstruction[instruction];
       if (this.checkForLeftTurn(instructionElement)) {
-        if (this.roverState.direction === EAST) {
-          this.roverState.direction = NORTH;
-        } else if (this.roverState.direction === NORTH) {
-          this.roverState.direction = WEST;
-        } else if (this.roverState.direction === WEST) {
-          this.roverState.direction = SOUTH;
-        } else if (this.roverState.direction === SOUTH) {
-          this.roverState.direction = EAST;
+        if (this.roverState.direction === this.EAST) {
+          this.roverState.direction = this.NORTH;
+        } else if (this.roverState.direction === this.NORTH) {
+          this.roverState.direction = this.WEST;
+        } else if (this.roverState.direction === this.WEST) {
+          this.roverState.direction = this.SOUTH;
+        } else if (this.roverState.direction === this.SOUTH) {
+          this.roverState.direction = this.EAST;
         }
-      } else if (instructionElement === RIGHT) {
-        if (this.roverState.direction === EAST) {
-          this.roverState.direction = SOUTH;
-        } else if (this.roverState.direction === SOUTH) {
-          this.roverState.direction = WEST;
-        } else if (this.roverState.direction === WEST) {
-          this.roverState.direction = NORTH;
-        } else if (this.roverState.direction === NORTH) {
-          this.roverState.direction = EAST;
+      } else if (instructionElement === this.RIGHT) {
+        if (this.roverState.direction === this.EAST) {
+          this.roverState.direction = this.SOUTH;
+        } else if (this.roverState.direction === this.SOUTH) {
+          this.roverState.direction = this.WEST;
+        } else if (this.roverState.direction === this.WEST) {
+          this.roverState.direction = this.NORTH;
+        } else if (this.roverState.direction === this.NORTH) {
+          this.roverState.direction = this.EAST;
         }
-      } else if (instructionElement === MOVE) {
-        if (this.roverState.direction === EAST) {
+      } else if (instructionElement === this.MOVE) {
+        if (this.roverState.direction === this.EAST) {
           this.roverState.xx++;
         }
-        if (this.roverState.direction === SOUTH) {
+        if (this.roverState.direction === this.SOUTH) {
           this.roverState.yy--;
         }
-        if (this.roverState.direction === WEST) {
+        if (this.roverState.direction === this.WEST) {
           this.roverState.xx--;
         }
-        if (this.roverState.direction === NORTH) {
+        if (this.roverState.direction === this.NORTH) {
           this.roverState.yy++;
         }
       }
