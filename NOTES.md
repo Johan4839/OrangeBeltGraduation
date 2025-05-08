@@ -47,6 +47,8 @@ Fifth 🍅
 [x] Expand methods for moving to position class
 [x] Expand methods for updating direction to position class
 [x] Migrate to new methods
-    
+
+Sixth 🍅
+[ ] Contract old method
 
 
