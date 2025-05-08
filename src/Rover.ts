@@ -147,7 +147,7 @@ export class Rover {
   }
 
   public get XYD(): string {
-    return `${this.roverState.xx} ${this.roverState.yy} ${this.roverState.direction}`;
+    return this.roverState.position.toString();
   }
 
   public pos(): string {

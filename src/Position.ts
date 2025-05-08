@@ -45,4 +45,8 @@ export class Position {
   setDirectionSouth() {
     this.direction = this.SOUTH;
   }
+
+  toString(): string {
+    return `${this.xx} ${this.yy} ${this.direction}`;
+  }
 }
