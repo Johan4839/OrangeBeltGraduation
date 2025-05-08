@@ -34,6 +34,8 @@
 Third 🍅
 [x] Rewrite if statement in go function to switch statement
 [x] Extract is looking in each direction to own method
+[x] Extract moving to own method
+[ ] Introduce position class
 
 
     

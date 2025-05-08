@@ -42,17 +42,33 @@ export class Rover {
 
   private executeMove() {
     if (this.isLookingEast()) {
-      this.roverState.xx++;
+      this.moveEast();
     }
     if (this.isLookingSouth()) {
-      this.roverState.yy--;
+      this.moveSouth();
     }
     if (this.isLookingWest()) {
-      this.roverState.xx--;
+      this.moveWest();
     }
     if (this.isLookingNorth()) {
-      this.roverState.yy++;
+      this.moveNorth();
     }
+  }
+
+  private moveNorth() {
+    this.roverState.yy++;
+  }
+
+  private moveWest() {
+    this.roverState.xx--;
+  }
+
+  private moveSouth() {
+    this.roverState.yy--;
+  }
+
+  private moveEast() {
+    this.roverState.xx++;
   }
 
   private isLookingNorth() {
