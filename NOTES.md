@@ -20,7 +20,9 @@
     M -> Move
 
 # Second 🍅
-[ ] Remembered Alessandro comment not to rename public methods, so rolling that back
+[x] Remembered Alessandro comment not to rename public methods, so rolling that back
+[x] Add back unused public method for the same reason
+
 
     
 
