@@ -22,7 +22,7 @@ describe("MarsRoverShould", () => {
     (startingPosition, instructions, expectedOutput) => {
       const rover = new Rover(startingPosition);
       rover.go(instructions);
-      expect(rover.getCurrentRoverPosition()).toBe(expectedOutput);
+      expect(rover.pos()).toBe(expectedOutput);
     },
   );
 });
