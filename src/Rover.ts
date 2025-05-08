@@ -29,15 +29,7 @@ export class Rover {
       if (this.checkForLeftTurn(instructionElement)) {
         this.performLeftTurn();
       } else if (this.checkForRightTurn(instructionElement)) {
-        if (this.roverState.direction === this.EAST) {
-          this.roverState.direction = this.SOUTH;
-        } else if (this.roverState.direction === this.SOUTH) {
-          this.roverState.direction = this.WEST;
-        } else if (this.roverState.direction === this.WEST) {
-          this.roverState.direction = this.NORTH;
-        } else if (this.roverState.direction === this.NORTH) {
-          this.roverState.direction = this.EAST;
-        }
+        this.performRightTurn();
       } else if (instructionElement === this.MOVE) {
         if (this.roverState.direction === this.EAST) {
           this.roverState.xx++;
@@ -52,6 +44,18 @@ export class Rover {
           this.roverState.yy++;
         }
       }
+    }
+  }
+
+  private performRightTurn() {
+    if (this.roverState.direction === this.EAST) {
+      this.roverState.direction = this.SOUTH;
+    } else if (this.roverState.direction === this.SOUTH) {
+      this.roverState.direction = this.WEST;
+    } else if (this.roverState.direction === this.WEST) {
+      this.roverState.direction = this.NORTH;
+    } else if (this.roverState.direction === this.NORTH) {
+      this.roverState.direction = this.EAST;
     }
   }
 

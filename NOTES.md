@@ -27,7 +27,7 @@
     [x] checkForLeftTurn
     [x] performLeftTurn
     [x] checkForRightTurn
-    [ ]
+    [x] performRightTurn
 
 
 
