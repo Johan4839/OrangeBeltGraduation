@@ -31,19 +31,23 @@ export class Rover {
       } else if (this.checkForRightTurn(instructionElement)) {
         this.performRightTurn();
       } else if (this.checkForMove(instructionElement)) {
-        if (this.roverState.direction === this.EAST) {
-          this.roverState.xx++;
-        }
-        if (this.roverState.direction === this.SOUTH) {
-          this.roverState.yy--;
-        }
-        if (this.roverState.direction === this.WEST) {
-          this.roverState.xx--;
-        }
-        if (this.roverState.direction === this.NORTH) {
-          this.roverState.yy++;
-        }
+        this.executeMove();
       }
+    }
+  }
+
+  private executeMove() {
+    if (this.roverState.direction === this.EAST) {
+      this.roverState.xx++;
+    }
+    if (this.roverState.direction === this.SOUTH) {
+      this.roverState.yy--;
+    }
+    if (this.roverState.direction === this.WEST) {
+      this.roverState.xx--;
+    }
+    if (this.roverState.direction === this.NORTH) {
+      this.roverState.yy++;
     }
   }
 
