@@ -49,4 +49,8 @@ export class Position {
   toString(): string {
     return `${this.xx} ${this.yy} ${this.direction}`;
   }
+
+  public getDirection(): string {
+    return this.direction;
+  }
 }

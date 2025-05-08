@@ -49,6 +49,7 @@ Fifth 🍅
 [x] Migrate to new methods
 
 Sixth 🍅
-[ ] Contract old method
-
+[x] Contract old method for move
+[x] Add getter for position and migrate to getPosition in switch case
+[ ] Contract old methods for setDirection methods
 

@@ -48,7 +48,7 @@ export class Rover {
   }
 
   private executeMove() {
-    switch (this.roverState.direction) {
+    switch (this.roverState.position.getDirection()) {
       case this.EAST:
         this.roverState.position.moveEast();
         break;
@@ -65,7 +65,7 @@ export class Rover {
   }
 
   private executeRightTurn() {
-    switch (this.roverState.direction) {
+    switch (this.roverState.position.getDirection()) {
       case this.EAST:
         this.setDirectionSouth();
         this.roverState.position.setDirectionSouth();
