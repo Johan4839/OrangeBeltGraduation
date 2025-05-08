@@ -22,7 +22,7 @@
 # Second 🍅
 [x] Remembered Alessandro comment not to rename public methods, so rolling that back
 [x] Add back unused public method for the same reason
-[ ] Extract instruction into its own method
+[x] Extract instruction into its own method
     [x] move constants to class level
     [x] checkForLeftTurn
     [x] performLeftTurn
@@ -31,6 +31,9 @@
     [x] checkForMove
     [x] executeMove
 
+Third 🍅
+[x] Rewrite if statement in go function to switch statement
+[ ] Extract execution handling in own methods
 
 
     

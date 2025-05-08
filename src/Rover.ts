@@ -26,12 +26,16 @@ export class Rover {
       instruction++
     ) {
       const instructionElement = roverMovementInstruction[instruction];
-      if (this.checkForLeftTurn(instructionElement)) {
-        this.executeLeftTurn();
-      } else if (this.checkForRightTurn(instructionElement)) {
-        this.executeRightTurn();
-      } else if (this.checkForMove(instructionElement)) {
-        this.executeMove();
+      switch (instructionElement) {
+        case this.LEFT:
+          this.executeLeftTurn();
+          break;
+        case this.RIGHT:
+          this.executeRightTurn();
+          break;
+        case this.MOVE:
+          this.executeMove();
+          break;
       }
     }
   }
@@ -50,11 +54,6 @@ export class Rover {
       this.roverState.yy++;
     }
   }
-
-  private checkForMove(instructionElement: string) {
-    return instructionElement === this.MOVE;
-  }
-
   private executeRightTurn() {
     if (this.roverState.direction === this.EAST) {
       this.roverState.direction = this.SOUTH;
@@ -66,11 +65,6 @@ export class Rover {
       this.roverState.direction = this.EAST;
     }
   }
-
-  private checkForRightTurn(instructionElement: string) {
-    return instructionElement === this.RIGHT;
-  }
-
   private executeLeftTurn() {
     if (this.roverState.direction === this.EAST) {
       this.roverState.direction = this.NORTH;
@@ -82,11 +76,6 @@ export class Rover {
       this.roverState.direction = this.EAST;
     }
   }
-
-  private checkForLeftTurn(instructionElement: string) {
-    return instructionElement === this.LEFT;
-  }
-
   public G(z: string): void {
     this.go(z[0]);
   }
