@@ -30,6 +30,7 @@ module.exports = [
             quotes: ['error', 'double'],
             radix: 'off',
             'prettier/prettier': ['error', { endOfLine: 'auto' }],
+            complexity: ['warn', { max: 4 }],
         },
     },
     {

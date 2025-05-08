@@ -93,11 +93,6 @@ export class Rover {
         break;
     }
   }
-
-  public G(z: string): void {
-    this.go(z[0]);
-  }
-
   public get XYD(): string {
     return this.roverState.position.toString();
   }
