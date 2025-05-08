@@ -6,15 +6,11 @@ export class Rover {
     const positionAndDirectionArray = positionAndDirection.split(" ");
     const minimumAmountOfInputVariables = 3;
     if (positionAndDirectionArray.length >= minimumAmountOfInputVariables) {
-      this.roverState.xx = parseInt(positionAndDirectionArray[0], 10);
-      this.roverState.yy = parseInt(positionAndDirectionArray[1], 10);
-      this.roverState.direction = positionAndDirectionArray[2][0];
+      const xPosition = parseInt(positionAndDirectionArray[0], 10);
+      const yPosition = parseInt(positionAndDirectionArray[1], 10);
+      const direction = positionAndDirectionArray[2][0];
 
-      this.roverState.position = new Position(
-        this.roverState.xx,
-        this.roverState.yy,
-        this.roverState.direction,
-      );
+      this.roverState.position = new Position(xPosition, yPosition, direction);
     }
   }
 
