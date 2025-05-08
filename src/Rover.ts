@@ -106,22 +106,6 @@ export class Rover {
     }
   }
 
-  private moveNorth() {
-    this.roverState.yy++;
-  }
-
-  private moveWest() {
-    this.roverState.xx--;
-  }
-
-  private moveSouth() {
-    this.roverState.yy--;
-  }
-
-  private moveEast() {
-    this.roverState.xx++;
-  }
-
   private setDirectionEast() {
     this.roverState.direction = this.EAST;
   }
