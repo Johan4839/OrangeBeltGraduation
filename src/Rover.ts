@@ -51,15 +51,19 @@ export class Rover {
     switch (this.roverState.direction) {
       case this.EAST:
         this.moveEast();
+        this.roverState.position.moveEast();
         break;
       case this.SOUTH:
         this.moveSouth();
+        this.roverState.position.moveSouth();
         break;
       case this.WEST:
         this.moveWest();
+        this.roverState.position.moveWest();
         break;
       case this.NORTH:
         this.moveNorth();
+        this.roverState.position.moveNorth();
         break;
     }
   }
@@ -68,15 +72,19 @@ export class Rover {
     switch (this.roverState.direction) {
       case this.EAST:
         this.setDirectionSouth();
+        this.roverState.position.setDirectionSouth();
         break;
       case this.SOUTH:
         this.setDirectionWest();
+        this.roverState.position.setDirectionWest();
         break;
       case this.WEST:
         this.setDirectionNorth();
+        this.roverState.position.setDirectionNorth();
         break;
       case this.NORTH:
         this.setDirectionEast();
+        this.roverState.position.setDirectionEast();
         break;
     }
   }
@@ -85,15 +93,19 @@ export class Rover {
     switch (this.roverState.direction) {
       case this.EAST:
         this.setDirectionNorth();
+        this.roverState.position.setDirectionNorth();
         break;
       case this.NORTH:
         this.setDirectionWest();
+        this.roverState.position.setDirectionWest();
         break;
       case this.WEST:
         this.setDirectionSouth();
+        this.roverState.position.setDirectionSouth();
         break;
       case this.SOUTH:
         this.setDirectionEast();
+        this.roverState.position.setDirectionEast();
         break;
     }
   }
@@ -113,6 +125,7 @@ export class Rover {
   private moveEast() {
     this.roverState.xx++;
   }
+
   private setDirectionEast() {
     this.roverState.direction = this.EAST;
   }

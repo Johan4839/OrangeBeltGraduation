@@ -43,7 +43,9 @@ Fourth 🍅
 [x] Add a getter for position in roverState
 [x] Add a setter so constructor can set position
 
-
+Fifth 🍅
+[x] Expand methods for moving to position class
+[x] Expand methods for updating direction to position class
     
 
 

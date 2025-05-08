@@ -8,4 +8,41 @@ export class Position {
     this.yy = yy;
     this.direction = direction;
   }
+
+  private readonly EAST = "E";
+  private readonly NORTH = "N";
+  private readonly WEST = "W";
+  private readonly SOUTH = "S";
+
+  moveNorth() {
+    this.yy++;
+  }
+
+  moveWest() {
+    this.xx--;
+  }
+
+  moveSouth() {
+    this.yy--;
+  }
+
+  moveEast() {
+    this.xx++;
+  }
+
+  setDirectionEast() {
+    this.direction = this.EAST;
+  }
+
+  setDirectionNorth() {
+    this.direction = this.NORTH;
+  }
+
+  setDirectionWest() {
+    this.direction = this.WEST;
+  }
+
+  setDirectionSouth() {
+    this.direction = this.SOUTH;
+  }
 }
