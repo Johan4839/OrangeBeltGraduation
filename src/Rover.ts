@@ -11,8 +11,9 @@ export class Rover {
     }
   }
 
+  private readonly LEFT = "L";
+
   public go(roverMovementInstruction: string): void {
-    const LEFT = "L";
     const RIGHT = "R";
     const EAST = "E";
     const NORTH = "N";
@@ -25,7 +26,7 @@ export class Rover {
       instruction++
     ) {
       const instructionElement = roverMovementInstruction[instruction];
-      if (instructionElement === LEFT) {
+      if (this.checkForLeftTurn(instructionElement)) {
         if (this.roverState.direction === EAST) {
           this.roverState.direction = NORTH;
         } else if (this.roverState.direction === NORTH) {
@@ -60,6 +61,10 @@ export class Rover {
         }
       }
     }
+  }
+
+  private checkForLeftTurn(instructionElement: string) {
+    return instructionElement === this.LEFT;
   }
 
   public G(z: string): void {
