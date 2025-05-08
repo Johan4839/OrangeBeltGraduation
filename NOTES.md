@@ -33,7 +33,7 @@
 
 Third 🍅
 [x] Rewrite if statement in go function to switch statement
-[ ] Extract execution handling in own methods
+[x] Extract is looking in each direction to own method
 
 
     
