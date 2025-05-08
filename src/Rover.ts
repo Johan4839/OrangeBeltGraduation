@@ -67,59 +67,35 @@ export class Rover {
   private executeRightTurn() {
     switch (this.roverState.position.getDirection()) {
       case this.EAST:
-        this.setDirectionSouth();
         this.roverState.position.setDirectionSouth();
         break;
       case this.SOUTH:
-        this.setDirectionWest();
         this.roverState.position.setDirectionWest();
         break;
       case this.WEST:
-        this.setDirectionNorth();
         this.roverState.position.setDirectionNorth();
         break;
       case this.NORTH:
-        this.setDirectionEast();
         this.roverState.position.setDirectionEast();
         break;
     }
   }
 
   private executeLeftTurn() {
-    switch (this.roverState.direction) {
+    switch (this.roverState.position.getDirection()) {
       case this.EAST:
-        this.setDirectionNorth();
         this.roverState.position.setDirectionNorth();
         break;
       case this.NORTH:
-        this.setDirectionWest();
         this.roverState.position.setDirectionWest();
         break;
       case this.WEST:
-        this.setDirectionSouth();
         this.roverState.position.setDirectionSouth();
         break;
       case this.SOUTH:
-        this.setDirectionEast();
         this.roverState.position.setDirectionEast();
         break;
     }
-  }
-
-  private setDirectionEast() {
-    this.roverState.direction = this.EAST;
-  }
-
-  private setDirectionNorth() {
-    this.roverState.direction = this.NORTH;
-  }
-
-  private setDirectionWest() {
-    this.roverState.direction = this.WEST;
-  }
-
-  private setDirectionSouth() {
-    this.roverState.direction = this.SOUTH;
   }
 
   public G(z: string): void {
