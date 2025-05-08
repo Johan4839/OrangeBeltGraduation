@@ -41,29 +41,53 @@ export class Rover {
   }
 
   private executeMove() {
-    if (this.isLookingEast()) {
-      this.moveEast();
-    }
-    if (this.isLookingSouth()) {
-      this.moveSouth();
-    }
-    if (this.isLookingWest()) {
-      this.moveWest();
-    }
-    if (this.isLookingNorth()) {
-      this.moveNorth();
+    switch (this.roverState.direction) {
+      case this.EAST:
+        this.moveEast();
+        break;
+      case this.SOUTH:
+        this.moveSouth();
+        break;
+      case this.WEST:
+        this.moveWest();
+        break;
+      case this.NORTH:
+        this.moveNorth();
+        break;
     }
   }
 
   private executeRightTurn() {
-    if (this.isLookingEast()) {
-      this.setDirectionSouth();
-    } else if (this.isLookingSouth()) {
-      this.setDirectionWest();
-    } else if (this.isLookingWest()) {
-      this.setDirectionNorth();
-    } else if (this.isLookingNorth()) {
-      this.setDirectionEast();
+    switch (this.roverState.direction) {
+      case this.EAST:
+        this.setDirectionSouth();
+        break;
+      case this.SOUTH:
+        this.setDirectionWest();
+        break;
+      case this.WEST:
+        this.setDirectionNorth();
+        break;
+      case this.NORTH:
+        this.setDirectionEast();
+        break;
+    }
+  }
+
+  private executeLeftTurn() {
+    switch (this.roverState.direction) {
+      case this.EAST:
+        this.setDirectionNorth();
+        break;
+      case this.NORTH:
+        this.setDirectionWest();
+        break;
+      case this.WEST:
+        this.setDirectionSouth();
+        break;
+      case this.SOUTH:
+        this.setDirectionEast();
+        break;
     }
   }
 
@@ -82,35 +106,6 @@ export class Rover {
   private moveEast() {
     this.roverState.xx++;
   }
-
-  private isLookingNorth() {
-    return this.roverState.direction === this.NORTH;
-  }
-
-  private isLookingWest() {
-    return this.roverState.direction === this.WEST;
-  }
-
-  private isLookingSouth() {
-    return this.roverState.direction === this.SOUTH;
-  }
-
-  private isLookingEast() {
-    return this.roverState.direction === this.EAST;
-  }
-
-  private executeLeftTurn() {
-    if (this.isLookingEast()) {
-      this.setDirectionNorth();
-    } else if (this.isLookingNorth()) {
-      this.setDirectionWest();
-    } else if (this.isLookingWest()) {
-      this.setDirectionSouth();
-    } else if (this.isLookingSouth()) {
-      this.setDirectionEast();
-    }
-  }
-
   private setDirectionEast() {
     this.roverState.direction = this.EAST;
   }

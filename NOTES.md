@@ -36,6 +36,7 @@ Third 🍅
 [x] Extract is looking in each direction to own method
 [x] Extract moving to own method
 [x] Methods for updating direction
+[x] Introduce switch statement instead of if chaining
 [ ] Introduce position class
 
 
