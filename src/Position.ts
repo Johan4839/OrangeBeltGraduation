@@ -1,5 +1,11 @@
 export class Position {
-  xx: number = 0;
-  yy: number = 0;
-  direction: string = "N";
+  private xx: number = 0;
+  private yy: number = 0;
+  private direction: string = "N";
+
+  constructor(xx: number, yy: number, direction: string) {
+    this.xx = xx;
+    this.yy = yy;
+    this.direction = direction;
+  }
 }

@@ -37,7 +37,11 @@ Third 🍅
 [x] Extract moving to own method
 [x] Methods for updating direction
 [x] Introduce switch statement instead of if chaining
-[ ] Introduce position class
+
+Fourth 🍅
+[x] Introduce position class
+[x] Add a getter for position in roverState
+[x] Add a setter so constructor can set position
 
 
     
