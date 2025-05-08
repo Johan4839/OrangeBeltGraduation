@@ -53,3 +53,4 @@ Sixth 🍅
 [x] Add getter for position and migrate to getPosition in switch case
 [x] Contract old methods for setDirection methods
 
+New line
